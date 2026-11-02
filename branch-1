@@ -17,7 +17,21 @@ public class GrossSalary {
 
         double grossSalary = basicSalary + allowance + bonus + EXTRA_PAYMENT;
 
+        // Loan question
+        System.out.print("Does the staff member have a loan? (yes/no): ");
+        String hasLoan = input.next();
+
+        double loanRepayment = 0;
+        if (hasLoan.equalsIgnoreCase("yes")) {
+            System.out.print("Enter current loan repayment amount (OMR): ");
+            loanRepayment = input.nextDouble();
+        }
+
+        double salaryAfterLoan = grossSalary - loanRepayment;
+
         System.out.println("Gross salary = " + grossSalary + " OMR");
+        System.out.println("Loan repayment = " + loanRepayment + " OMR");
+        System.out.println("Salary after loan repayment = " + salaryAfterLoan + " OMR");
 
         input.close();
     }
