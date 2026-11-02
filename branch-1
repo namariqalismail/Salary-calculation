@@ -17,8 +17,10 @@ public class GrossSalary {
 
         double grossSalary = basicSalary + allowance + bonus + EXTRA_PAYMENT;
 
-        System.out.println("Gross salary = " + grossSalary + " OMR");
+        // Loan question
+        System.out.print("Does the staff member have a loan? (yes/no): ");
+        String hasLoan = input.next();
 
-        input.close();
-    }
-}
+        double loanRepayment = 0;
+        if (hasLoan.equalsIgnoreCase("yes")) {
+            System.out.print("Enter current loan repayment amount (OMR): ");
