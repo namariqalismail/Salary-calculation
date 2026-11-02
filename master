@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class GrossSalary {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter basic salary: ");
+        double basicSalary = input.nextDouble();
+
+        System.out.print("Enter allowance: ");
+        double allowance = input.nextDouble();
+
+        double grossSalary = basicSalary + allowance;
+
+        System.out.println("Gross salary = " + grossSalary);
+
+        input.close();
+    }
+}
